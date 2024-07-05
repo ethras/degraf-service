@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Dégraf Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Dégraf Service Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>Galerie Photo</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Les images seront ajoutées ici par JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Dégraf Service. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryGrid = document.getElementById('galleryGrid');
+
+            for (let i = 1; i <= 50; i++) {
+                const beforeImg = new Image();
+                const afterImg = new Image();
+                beforeImg.src = `images/photo${i}-before.jpg`;
+                afterImg.src = `images/photo${i}-after.jpg`;
+
+                beforeImg.onload = function() {
+                    const rowDiv = document.createElement('div');
+                    rowDiv.className = 'gallery-row';
+
+                    const beforeDiv = document.createElement('div');
+                    beforeDiv.className = 'gallery-item';
+                    beforeDiv.appendChild(beforeImg);
+
+                    const afterDiv = document.createElement('div');
+                    afterDiv.className = 'gallery-item';
+                    afterDiv.appendChild(afterImg);
+
+                    rowDiv.appendChild(beforeDiv);
+                    rowDiv.appendChild(afterDiv);
+
+                    galleryGrid.appendChild(rowDiv);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

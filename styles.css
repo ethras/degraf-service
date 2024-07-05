@@ -1,0 +1,273 @@
+/* Définition des couleurs */
+:root {
+    --main-bg-color: #333; /* Gris foncé pour un aspect industriel */
+    --secondary-bg-color: #555; /* Gris clair pour les contrastes */
+    --text-color: #fff; /* Blanc pour le texte */
+    --accent-color: #ec732f; /* Orange pour les accents correspondant au logo */
+    --card-bg-color: #555; /* Couleur de fond pour les cartes de services */
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+header {
+    background: var(--secondary-bg-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px; /* Augmente la hauteur maximale du logo */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Styles pour l'image d'accueil */
+.hero-image {
+    display: block;
+    margin: 0 auto 20px; /* Centrage horizontal avec espace en bas */
+    max-width: 100%;
+    height: auto;
+    max-height: 600px; /* Augmente la hauteur maximale */
+}
+
+.intro, .gallery {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Augmente la largeur maximale de la galerie */
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px; /* Ajout d'espace en bas */
+}
+
+.contact-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    margin-top: 40px; /* Ajout d'espace en haut */
+}
+
+.contact-form, .contact-info {
+    padding: 20px;
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    font-size: 18px; /* Taille de texte augmentée */
+    margin-bottom: 10px;
+}
+
+.intro h1, .services h2, .contact-form h2, .gallery h2 {
+    color: var(--accent-color);
+}
+
+/* Styles pour les cartes de services */
+.services {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.card {
+    background-color: var(--card-bg-color); /* Fond légèrement plus clair pour les cartes */
+    border-radius: 8px; /* Bords arrondis pour un look moderne */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre portée pour un effet de profondeur */
+    padding: 20px; /* Espace intérieur pour le contenu */
+    margin-bottom: 50px; /* Espace entre les cartes augmenté */
+    display: flex; /* Flexbox pour aligner les éléments à l'intérieur */
+    align-items: center; /* Centrage vertical des éléments à l'intérieur */
+    border: 1px solid var(--accent-color); /* Encadré orange fin */
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.service-item img {
+    width: 60px; /* Taille ajustée des pictogrammes */
+    height: 60px; /* Hauteur ajustée des pictogrammes */
+    margin-right: 15px; /* Espace entre le pictogramme et le texte */
+    display: block;
+}
+
+.services p {
+    margin: 0; /* Retirer la marge par défaut du paragraphe */
+    color: var(--text-color); /* Couleur du texte pour une bonne lisibilité */
+    font-size: 16px; /* Taille du texte appropriée */
+}
+
+.service-items-row {
+    display: flex;
+    justify-content: space-around; /* Espacement des éléments */
+    margin-top: 40px; /* Ajout d'espace en haut */
+    margin-bottom: 40px; /* Ajout d'espace en bas */
+}
+
+.service-items-row .service-item {
+    flex: 1;
+    text-align: center; /* Centrer le texte sous les pictogrammes */
+    display: flex;
+    flex-direction: column; /* Aligner les éléments verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+    padding: 0; /* Retirer tout padding supplémentaire */
+}
+
+.service-items-row .service-item img {
+    width: 80px; /* Taille des pictogrammes */
+    height: 80px; /* Taille des pictogrammes */
+    margin-bottom: 10px; /* Ajouter un petit espace entre le pictogramme et le texte */
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: var(--main-bg-color); /* Fond foncé pour les champs de saisie */
+    color: var(--text-color); /* Couleur du texte */
+    width: 100%; /* S'assurer que les champs prennent toute la largeur disponible */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #e69500; /* Une nuance plus foncée de l'orange */
+}
+
+footer {
+    background: var(--secondary-bg-color);
+    text-align: center;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+/* Styles pour la galerie */
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    flex: 1;
+    margin: 0 10px; /* Espace entre les images */
+}
+
+.gallery-item img {
+    width: 100%; /* Assure que l'image occupe 100% de la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    cursor: pointer;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery-row {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        margin: 10px 0;
+    }
+
+    .contact-section {
+        max-width: 90%;
+    }
+
+    .services {
+        max-width: 90%;
+    }
+
+    .service-items-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-items-row .service-item {
+        margin-bottom: 20px;
+    }
+}
